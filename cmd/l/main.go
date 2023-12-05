@@ -37,11 +37,22 @@ var (
 	unignore_contents       bool
 )
 
+// write a function to create a map with string keys
+func makeMap(results []*language) map[string]*language {
+	m := make(map[string]*language)
+	for i := 0; i < len(results); i++ {
+		m[results[i].Language] = results[i]
+	}
+	return m
+}
+
 // used for displaying results
 type (
 	language struct {
 		Language string  `json:"language"`
 		Percent  float64 `json:"percent"`
+		Percentage string `json:"percentage"`
+		Size int `json:"size"`
 	}
 
 	language_color struct {
@@ -200,9 +211,12 @@ func main() {
 
 	results := []*language{}
 	for lang, size := range langs {
+		percent := float64 (float64(size) / float64(total_size)) * 100.0
 		results = append(results, &language{
 			Language: lang,
-			Percent:  (float64(size) / float64(total_size)) * 100.0,
+			Percent: percent, 
+                        Percentage: fmt.Sprintf("%.2f", percent),
+			Size: size,
 		})
 	}
 
@@ -214,6 +228,7 @@ func main() {
 		}
 		for i := output_limit; i < len(results); i++ {
 			other.Percent += results[i].Percent
+			other.Size += 0
 		}
 		results = append(results[0:output_limit], other)
 	}
@@ -230,7 +245,7 @@ func main() {
 			}
 			json_bytes, err = json.MarshalIndent(out, "", "  ")
 		} else {
-			json_bytes, err = json.MarshalIndent(results, "", "  ")
+			json_bytes, err = json.MarshalIndent(makeMap(results), "", "  ")
 		}
 		checkErr(err)
 		fmt.Println(string(json_bytes))
