@@ -1,0 +1,30 @@
+schema = 3
+
+[mod]
+  [mod."github.com/Unknwon/goconfig"]
+    version = "v1.0.0"
+    hash = "sha256-69gj9KeZOLHVAEC8ybyOqT+TvF5bd8GdWOEkOhakwIE="
+  [mod."github.com/dayvonjersen/git4go"]
+    version = "v0.0.0-20150730160921-060dbfa3f1a1"
+    hash = "sha256-xzGyaE4CFCU445kei5byr/QQpgqfSnclSqKh6A1MM5M="
+  [mod."github.com/edsrzf/mmap-go"]
+    version = "v1.1.0"
+    hash = "sha256-LFcJue98awAFkSPRc93tVvon3kWS7AvumrluxxRzt4c="
+  [mod."github.com/jbrukh/bayesian"]
+    version = "v0.0.0-20200318221351-d726b684ca4a"
+    hash = "sha256-OU2lFXnsif8PoLNsWrpPtOd3W2uXagO/oUaYU4WFyDQ="
+  [mod."github.com/jteeuwen/go-bindata"]
+    version = "v3.0.7+incompatible"
+    hash = "sha256-YpBtI9PhytofkqUggTADrGny3x41DB13j8VXsynnHe0="
+  [mod."github.com/shibukawa/bsearch"]
+    version = "v0.0.0-20150723123235-8c107cfb29e1"
+    hash = "sha256-g4ed4w32amHLkHqq7EyPJekfPJYklfWjQBHyOEjX4KQ="
+  [mod."golang.org/x/sys"]
+    version = "v0.5.0"
+    hash = "sha256-0LTr3KeJ1OMQAwYUQo1513dXJtQAJn5Dq8sFkc8ps1U="
+  [mod."golang.org/x/text"]
+    version = "v0.10.0"
+    hash = "sha256-pt4Ce9+Bvf7f0Vo8oUZ71F1aSCcCxsx6Lg0cvanq7x8="
+  [mod."gopkg.in/yaml.v1"]
+    version = "v1.0.0-20140924161607-9f9df34309c0"
+    hash = "sha256-9Z0HKi2YmBt+ShoSjBE3bXhcZmQ+8gEw6knhrw0ZDeU="
