@@ -1666,7 +1666,7 @@ ECL:
 ECLiPSe:
   type: programming
   color: "#001d9d"
-  group: prolog
+  group: Prolog
   extensions:
   - ".ecl"
   tm_scope: source.prolog.eclipse
@@ -1748,6 +1748,17 @@ Ecmarkup:
   aliases:
   - ecmarkdown
   language_id: 844766630
+EdgeQL:
+  type: programming
+  color: "#31A7FF"
+  aliases:
+  - esdl
+  extensions:
+  - ".edgeql"
+  - ".esdl"
+  ace_mode: text
+  tm_scope: source.edgeql
+  language_id: 925235833
 EditorConfig:
   type: data
   color: "#fff1f2"
@@ -2265,20 +2276,20 @@ Gemini:
   wrap: true
   tm_scope: source.gemini
   language_id: 310828396
-Genero:
+Genero 4gl:
   type: programming
   color: "#63408e"
   extensions:
   - ".4gl"
-  tm_scope: source.genero
+  tm_scope: source.genero-4gl
   ace_mode: text
   language_id: 986054050
-Genero Forms:
+Genero per:
   type: markup
   color: "#d8df39"
   extensions:
   - ".per"
-  tm_scope: source.genero-forms
+  tm_scope: source.genero-per
   ace_mode: text
   language_id: 902995658
 Genie:
@@ -2376,7 +2387,6 @@ Gherkin:
 Git Attributes:
   type: data
   color: "#F44D27"
-  group: INI
   aliases:
   - gitattributes
   filenames:
@@ -2421,6 +2431,15 @@ Gleam:
   - ".gleam"
   tm_scope: source.gleam
   language_id: 1054258749
+Glimmer JS:
+  type: programming
+  extensions:
+  - ".gjs"
+  ace_mode: javascript
+  color: "#F5835F"
+  tm_scope: source.gjs
+  group: JavaScript
+  language_id: 5523150
 Glyph:
   type: programming
   color: "#c1ac7f"
@@ -2981,7 +3000,6 @@ Idris:
 Ignore List:
   type: data
   color: "#000000"
-  group: INI
   aliases:
   - ignore
   - gitignore
@@ -3175,6 +3193,7 @@ JSON:
   - ".watchmanconfig"
   - Pipfile.lock
   - composer.lock
+  - deno.lock
   - flake.lock
   - mcmod.info
   language_id: 174
@@ -3695,6 +3714,14 @@ Lean:
   tm_scope: source.lean
   ace_mode: text
   language_id: 197
+Lean 4:
+  type: programming
+  group: Lean
+  extensions:
+  - ".lean"
+  tm_scope: source.lean4
+  ace_mode: text
+  language_id: 455147478
 Less:
   type: markup
   color: "#1d365d"
@@ -4446,7 +4473,7 @@ Nasal:
   extensions:
   - ".nas"
   tm_scope: source.nasal
-  ace_mode: text
+  ace_mode: nasal
   language_id: 178322513
 Nearley:
   type: programming
@@ -5333,6 +5360,14 @@ PowerShell:
   interpreters:
   - pwsh
   language_id: 293
+Praat:
+  type: programming
+  color: "#c8506d"
+  tm_scope: source.praat
+  ace_mode: praat
+  extensions:
+  - ".praat"
+  language_id: 106029007
 Prisma:
   type: data
   color: "#0c344b"
@@ -6824,7 +6859,7 @@ Svelte:
   language_id: 928734530
 Sway:
   type: programming
-  color: "#dea584"
+  color: "#00F58C"
   extensions:
   - ".sw"
   tm_scope: source.sway
@@ -7031,6 +7066,17 @@ Terra:
   interpreters:
   - lua
   language_id: 371
+Terraform Template:
+  type: markup
+  extensions:
+  - ".tftpl"
+  color: "#7b42bb"
+  tm_scope: source.hcl.terraform
+  ace_mode: ruby
+  codemirror_mode: ruby
+  codemirror_mime_type: text/x-ruby
+  group: HCL
+  language_id: 856832701
 Texinfo:
   type: prose
   wrap: true
@@ -7115,6 +7161,14 @@ Thrift:
   - ".thrift"
   ace_mode: text
   language_id: 374
+Toit:
+  type: programming
+  color: "#c2c9fb"
+  extensions:
+  - ".toit"
+  tm_scope: source.toit
+  ace_mode: text
+  language_id: 356554395
 Turing:
   type: programming
   color: "#cf142b"
@@ -8281,6 +8335,14 @@ xBase:
   tm_scope: source.harbour
   ace_mode: text
   language_id: 421
+Docker Interactive Notebook:
+  type: markup
+  ace_mode: docker
+  color: "#7582D1"
+  extensions:
+  - ".idnb"
+  tm_scope: Untitled.idnb 
+  language_id: 422
 `,
 
 	"data/vendor.yml": `# Vendored files and directories are excluded from language
